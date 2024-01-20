@@ -56,7 +56,6 @@ def get_goodreads_user_books_by_page(user_id, page_num=1):
     # Process the DataFrame
     user_books = goodreads[0]
 
-    user_books.to_csv('user_books.csv')
     user_books = user_books[['title', 'author', 'pages', 'rating', 'ratings', 'pub', 'rating.1', 'votes', 'started', 'read']]
     user_books['goodreads_id'] = user_books['title'].apply(lambda x: x[1]).str.extract(r'(\d+)')
     

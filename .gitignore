@@ -37,5 +37,6 @@ next-env.d.ts
 # venv
 venv
 
-# .env
-.env
+# ignore __pycache__ from any folder
+__pycache__/
+ *.pyc
